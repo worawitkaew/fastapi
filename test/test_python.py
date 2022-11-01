@@ -2,22 +2,24 @@
 import pytest
 
 from ..main import app
+# from .test_main import test_client
+
 from fastapi.testclient import TestClient
 
 @pytest.fixture
 def test_client():
-    # run this before running tests (setup db)
-    with TestClient(app) as temp:
-        yield temp
-    # run this after running tests (destroy db)
+  
+    client = TestClient(app)
+    return client
+  
 
 
 
     
 @pytest.mark.asyncio
-async def test_ProductType1(test_client):
+def test_ProductType1(test_client):
 
-    response = await test_client.get("/")
+    response = test_client.get("/")
     assert response.json() == {
-    "message": "Hello World"
+    "message": "Hello World2"
     }
