@@ -21,5 +21,5 @@ def test_ProductType1(test_client):
 
     response = test_client.get("/")
     assert response.json() == {
-    "message": "Hello World2"
+    "message": "Hello World"
     }
