@@ -19,5 +19,5 @@ async def test_ProductType1(test_client):
 
     response = await test_client.get("/")
     assert response.json() == {
-    "message": "Hello Worl"
+    "message": "Hello World"
     }
