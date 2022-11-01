@@ -1,5 +1,5 @@
-fastapi==0.72.0
-uvicorn==0.17.0
+fastapi
+uvicorn
 pytest
 requests
 anyio
