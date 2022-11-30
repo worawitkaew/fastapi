@@ -6,3 +6,5 @@ anyio
 
 twisted
 pytest-twisted
+
+httpx
