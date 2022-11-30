@@ -26,7 +26,7 @@ A Basic FastAPI based CRUD backend API without any database connection.
 
 ### How to have DNS?
 
- - go to `https://registrar.epik.com/domain/portfolio`
+ - go to [epik](https://registrar.epik.com/domain/portfolio)
  - buy your DNS
  - DNS Record
 
