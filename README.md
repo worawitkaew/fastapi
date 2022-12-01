@@ -53,3 +53,17 @@ A Basic FastAPI based CRUD backend API without any database connection.
     }
 
  ```
+
+ ----
+ ### How to have Sql server?
+- bring this to docker-compose.yml
+``` text
+    sql-server-db:
+    container_name: sql-server-db
+    image: microsoft/mssql-server-linux:2017-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "strong_password"
+      ACCEPT_EULA: "Y"
+```
