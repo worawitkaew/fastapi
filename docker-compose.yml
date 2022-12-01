@@ -9,7 +9,7 @@ services:
       - 8000:8000
 
     # command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload --access-log
-    command: uvicorn main:app --host 0.0.0.0 --port 8088 --access-log
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --access-log
 
   # sql-server-db:
   #   container_name: sql-server-db
