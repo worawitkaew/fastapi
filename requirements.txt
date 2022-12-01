@@ -1,5 +1,7 @@
 fastapi
 uvicorn
+
+httpx
 pytest
 requests
 anyio
@@ -7,4 +9,3 @@ anyio
 twisted
 pytest-twisted
 
-httpx
