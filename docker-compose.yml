@@ -11,11 +11,11 @@ services:
     # command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload --access-log
     command: uvicorn main:app --host 0.0.0.0 --port 8088 --access-log
 
-  sql-server-db:
-    container_name: sql-server-db
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    ports:
-      - "1433:1433"
-    environment:
-      SA_PASSWORD: "dewasmith2350"
-      ACCEPT_EULA: "Y"
+  # sql-server-db:
+  #   container_name: sql-server-db
+  #   image: mcr.microsoft.com/mssql/server:2022-latest
+  #   ports:
+  #     - "1433:1433"
+  #   environment:
+  #     SA_PASSWORD: "dewasmith2350"
+  #     ACCEPT_EULA: "Y"
