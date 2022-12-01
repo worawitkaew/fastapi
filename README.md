@@ -32,6 +32,8 @@ A Basic FastAPI based CRUD backend API without any database connection.
 
 ### How to setting https?
  - go to link `https://manage.sslforfree.com/certificates`
+ - Document how to install on nginx is [Here](https://help.zerossl.com/hc/en-us/articles/360058295894-Installing-SSL-Certificate-on-NGINX)
+ - `cat certificate.crt ca_bundle.crt >> certificate.crt`
  - install file on your project (exammple : `dewasmith.xyz`)
  ``` bash
     server {
