@@ -1,3 +1,5 @@
+python-dotenv
+
 fastapi
 uvicorn
 
@@ -9,3 +11,8 @@ anyio
 twisted
 pytest-twisted
 
+pymongo
+
+python-multipart
+python-jose
+passlib
