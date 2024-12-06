@@ -15,7 +15,8 @@ jobs:
     steps:
     - name: Set up Docker Compose
       run: |
-        sudo apt install docker-compose
+        
+        ls
     - name: Build the Docker image
       run: docker-compose build
     - name: Run docker image
