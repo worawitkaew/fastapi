@@ -11,15 +11,11 @@ def test_client():
   
     client = TestClient(app)
     return client
-  
-
-
-
     
 @pytest.mark.asyncio
 def test_ProductType1(test_client):
 
-    response = test_client.get("/")
+    response = test_client.get("/test")
     assert response.json() == {
-    "message": "Hello World"
+    "message_test": "Hello World_test"
     }

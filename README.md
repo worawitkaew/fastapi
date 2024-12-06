@@ -34,18 +34,18 @@ A Basic FastAPI based CRUD backend API without any database connection.
  - go to link `https://manage.sslforfree.com/certificates`
  - Document how to install on nginx is [Here](https://help.zerossl.com/hc/en-us/articles/360058295894-Installing-SSL-Certificate-on-NGINX)
  - `cat certificate.crt ca_bundle.crt >> certificate.crt`
- - install file on your project (exammple : `dewasmith.xyz`)
+ - install file on your project (exammple : `{your name folder}`)
  ``` bash
     server {
 
         listen               443 ssl;
 
         ssl                  on;
-        ssl_certificate      /home/ubuntu/fastapi/dewasmith.xyz/certificate.crt;
-        ssl_certificate_key  /home/ubuntu/fastapi/dewasmith.xyz/private.key;
+        ssl_certificate      /home/ubuntu/fastapi/{your name folder}/certificate.crt;
+        ssl_certificate_key  /home/ubuntu/fastapi/{your name folder}/private.key;
 
 
-        server_name  dewasmith.xyz;
+        server_name  {your name folder};
         access_log   /var/log/nginx/nginx.vhost.access.log;
         error_log    /var/log/nginx/nginx.vhost.error.log;
 
@@ -55,3 +55,9 @@ A Basic FastAPI based CRUD backend API without any database connection.
     }
 
  ```
+
+### How to use pytest?
+
+ - go to [epik](https://registrar.epik.com/domain/portfolio)
+ - buy your DNS
+ - DNS Record

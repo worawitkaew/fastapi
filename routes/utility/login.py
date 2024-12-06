@@ -14,7 +14,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/routes/fund_transfer/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/routes/pre_route/token")
 
 router = APIRouter()
 
@@ -62,15 +62,16 @@ async def get_current_active_user(current_user = Depends(get_current_user)):
     return current_user
 
 
+
+
 @router.post("/token")
 async def login_for_access_token(request: Request,form_data: OAuth2PasswordRequestForm = Depends()):
- 
-    mongodb_clinet = request.app.mongodb_clinet
-    collection_name = "My_website"
-    db = mongodb_clinet[collection_name]
-    data = {"username": form_data.username,"password":form_data.password}
-    current =  db["users"].find_one(data)
-   
+    # fakse database ####
+    current = {"username":"username_test"
+                 ,"password":"password_test"
+                 ,"disabled":False}
+    ########################
+
     if not current:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
