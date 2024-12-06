@@ -13,10 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      
     - name: Set up Docker Compose
       run: |
-        
-        ls
+        sudo apt install docker-compose
+
     - name: Build the Docker image
       run: docker-compose build
     - name: Run docker image
