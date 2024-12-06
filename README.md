@@ -58,6 +58,4 @@ A Basic FastAPI based CRUD backend API without any database connection.
 
 ### How to use pytest?
 
- - go to [epik](https://registrar.epik.com/domain/portfolio)
- - buy your DNS
- - DNS Record
+ - `docker-compose run fastapi pytest .`
